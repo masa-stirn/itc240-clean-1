@@ -5,8 +5,11 @@ config.php
 Stores configuration data for our application
 */
 
+ob_start(); //prevents header errors
 
-//echo basename($_SERVER['PHP_SELF']);
+define('DEBUG',TRUE); #we want to see all errors
+
+include 'credentials.php'; //database credentials
 
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
@@ -136,6 +139,11 @@ switch(THIS_PAGE){
         $subHeader = 'Check out my top 5 museum suggestions';
         $planetContent = rotate($planets);
     break; 
+    case 'db-test.php':
+        $title = "My database test page";
+        $pageHeader = 'Database test';
+        $subHeader = 'Check this page to see if your database credentials are correct.';
+    break; 
     
 };
 
@@ -200,5 +208,20 @@ function rotate ($arr)
 		return $arr;
 	}
 }#end rotate
+
+
+function myerror($myFile, $myLine, $errorMsg)
+{
+    if(defined('DEBUG') && DEBUG)
+    {
+       echo "Error in file: <b>" . $myFile . "</b> on line: <b>" . $myLine . "</b><br />";
+       echo "Error Message: <b>" . $errorMsg . "</b><br />";
+       die();
+    }else{
+		echo "I'm sorry, we have encountered an error.  Would you like to buy some socks?";
+		die();
+    }
+}
+
 
 ?>
