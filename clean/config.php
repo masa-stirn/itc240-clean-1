@@ -102,7 +102,7 @@ The zodiac sign positions of Pluto are considered to possess great historical si
 
 // defeault page values
 $title = THIS_PAGE;
-$siteName = 'Site name';
+$siteName = 'Masa Wu ITC240';
 $slogan = 'Whatever it is you do, we do it better';
 $pageHeader = 'The developer forgot to put a page header';
 $subHeader = 'The developer forgot to put a sub header';
@@ -116,7 +116,17 @@ switch(THIS_PAGE){
         $title = "My template page";
         $pageHeader = 'Put page ID here';
         $subHeader = 'Put more info about page here';
-    break;    
+    break;   
+    case 'customer_list.php':
+        $title = "A list of customers";
+        $pageHeader = 'Our customers';
+        $subHeader = "Don't sue us because we're using celebrity photos.";
+    break; 
+    case 'banned_books_list.php':
+        $title = "A list of banned books";
+        $pageHeader = 'THE ultimate book list.';
+        $subHeader = "Explore the sins.";
+    break; 
     case 'contact.php':
         $title = "Please contact us";
         $pageHeader = 'Let us know what we can do for you';

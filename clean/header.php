@@ -39,7 +39,13 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">db-test</a>
+              <a class="nav-link" href="db-test.php">db-test</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer_list.php">Customers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="banned_books_list.php">Banned Books</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="daily.php">Daily</a>
